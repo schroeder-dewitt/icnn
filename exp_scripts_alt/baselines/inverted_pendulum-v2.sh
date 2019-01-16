@@ -17,4 +17,4 @@ seed2=`od -A n -t d -N 4 /dev/urandom`
 seed3=`od -A n -t d -N 4 /dev/urandom`
 cmd_line=" --model ICNN --env InvertedPendulum-v2 --outdir /icnn/results/${tag} --total 100000 --force --train 100 --test 1 --tfseed ${seed1} --npseed ${seed2} --gymseed ${seed3} "
 
-${MADDPG_PATH}/exp_scripts_alt/run.sh "${target}" "${cmd_line}" "${tag}" "${reps}"
+${ICNN_PATH}/exp_scripts_alt/run.sh "${target}" "${cmd_line}" "${tag}" "${reps}"
