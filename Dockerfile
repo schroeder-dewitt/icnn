@@ -55,7 +55,7 @@ RUN echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/.mujoco/mjpro150/bin" >>
 RUN python3 -c "import mujoco_py"
 
 RUN apt-get install -y libhdf5-serial-dev
-RUN pip3 install numpy sklearn h5py gym cffi setproctitle matplotlib pymongo sacred pyyaml
+RUN pip3 install numpy sklearn h5py gym cffi setproctitle matplotlib pymongo sacred pyyaml dill tflearn
 
 EXPOSE 8888
 
