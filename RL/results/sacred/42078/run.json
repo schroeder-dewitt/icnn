@@ -36,7 +36,7 @@
       ]
     ]
   },
-  "heartbeat": null,
+  "heartbeat": "2019-01-16T17:46:12.110672",
   "host": {
     "ENV": {},
     "cpu": "Intel(R) Core(TM) i7-5930K CPU @ 3.50GHz",
@@ -90,6 +90,7 @@
     }
   },
   "resources": [],
+  "result": null,
   "start_time": "2019-01-16T17:40:00.152695",
   "status": "RUNNING"
 }

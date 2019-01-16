@@ -13,11 +13,11 @@ fi
 
 SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-if [ -z "$MADDPG_RESULTS_PATH" ]; then
-    RESULTS_PATH="${MADDPG_PATH}/results"
+if [ -z "$ICNN_RESULTS_PATH" ]; then
+    RESULTS_PATH="${ICNN_PATH}/results"
     mkdir -p $RESULTS_PATH
 else
-    RESULTS_PATH=$MADDPG_RESULTS_PATH
+    RESULTS_PATH=$ICNN_RESULTS_PATH
 fi
 
 echo "HASH: ${HASH}"
