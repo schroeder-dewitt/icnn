@@ -48,7 +48,28 @@
       ]
     ]
   },
-  "heartbeat": "2019-01-16T20:20:04.886886",
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/sacred/config/captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"RL/src/main.py\", line 206, in my_main\n    runtime_env.run(mainer, FLAGS.outdir)\n",
+    "  File \"/icnn/RL/src/runtime_env.py\", line 34, in run\n    Executor(main, outdir).execute()\n",
+    "  File \"/icnn/RL/src/runtime_env.py\", line 82, in execute\n    self.main()\n",
+    "  File \"RL/src/main.py\", line 203, in mainer\n    ExperimentICNN().run(logger)\n",
+    "  File \"RL/src/main.py\", line 69, in run\n    reward, timestep = self.run_episode(test=False, monitor=False, ts=self.train_timestep, _logger=_logger)\n",
+    "  File \"RL/src/main.py\", line 106, in run_episode\n    self.agent.observe(filtered_reward, term, observation, test=test)\n",
+    "  File \"/icnn/RL/src/icnn.py\", line 302, in observe\n    loss = self.train()\n",
+    "  File \"/icnn/RL/src/icnn.py\", line 321, in train\n    log=FLAGS.summary, global_step=self.t)\n",
+    "  File \"/icnn/RL/src/icnn.py\", line 438, in __call__\n    res = self._session.run(out, feeds)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 929, in run\n    run_metadata_ptr)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1152, in _run\n    feed_dict_tensor, options, run_metadata)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1328, in _do_run\n    run_metadata)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1334, in _do_call\n    return fn(*args)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1319, in _run_fn\n    options, feed_dict, fetch_list, target_list, run_metadata)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1407, in _call_tf_sessionrun\n    run_metadata)\n",
+    "  File \"/icnn/RL/src/runtime_env.py\", line 66, in on_kill\n    sys.exit(-1)\n",
+    "SystemExit: -1\n"
+  ],
+  "heartbeat": "2019-01-16T20:20:27.893171",
   "host": {
     "ENV": {},
     "cpu": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
@@ -99,5 +120,6 @@
   "resources": [],
   "result": null,
   "start_time": "2019-01-16T20:19:04.591404",
-  "status": "RUNNING"
+  "status": "FAILED",
+  "stop_time": "2019-01-16T20:20:27.906646"
 }
