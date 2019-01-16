@@ -74,7 +74,7 @@ class Experiment(object):
         self.env.monitor._start(os.path.join(FLAGS.outdir, 'monitor'), force=FLAGS.force)
         #self.menv.monitor.start(os.path.join(FLAGS.outdir, 'monitor'), force=FLAGS.force)
         self.env.seed(FLAGS.gymseed)
-        gym.logger.setLevel(gym.logging.WARNING)
+        gym.logger.setLevel(gym.logger.WARN)
 
         dimO = self.env.observation_space.shape
         dimA = self.env.action_space.shape

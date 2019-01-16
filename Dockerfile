@@ -37,6 +37,7 @@ WORKDIR /install
 #### -------------------------------------------------------------------
 #### install mujoco
 #### -------------------------------------------------------------------
+RUN add-apt-repository ppa:jamesh/snap-support && apt-get update && apt install -y patchelf
 RUN apt install -y libosmesa6-dev libglew1.5-dev
 # RUN add-apt-repository ppa:jamesh/snap-support && apt-get update && apt install -y patchelf
 RUN mkdir -p /root/.mujoco \

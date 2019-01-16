@@ -112,11 +112,11 @@ class Agent:
         summary_writer = tf.train.SummaryWriter(os.path.join(FLAGS.outdir, 'board'),
                                                 self.sess.graph)
         if FLAGS.icnn_opt == 'adam':
-            tf.scalar_summary('Qvalue', tf.reduce_mean(q))
+            tf.summary.scalar('Qvalue', tf.reduce_mean(q))
         elif FLAGS.icnn_opt == 'bundle_entropy':
-            tf.scalar_summary('Qvalue', tf.reduce_mean(q_entr))
-        tf.scalar_summary('loss', ms_td_error)
-        tf.scalar_summary('reward', tf.reduce_mean(rew))
+            tf.summary.scalar('Qvalue', tf.reduce_mean(q_entr))
+        tf.summary.scalar('loss', ms_td_error)
+        tf.summary.scalar('reward', tf.reduce_mean(rew))
         merged = tf.merge_all_summaries()
 
         # tf functions
@@ -364,7 +364,7 @@ class Agent:
                               regularizer=reg, bias_init=tf.constant_initializer(1.))
                     variable_summaries(zu_u, suffix='zu_u{}'.format(i))
                 with tf.variable_scope('z{}_zu_proj'.format(i)) as s:
-                    z_zu = fc(tf.mul(prevZ, zu_u), sz, reuse=reuse, scope=s,
+                    z_zu = fc(tf.multiply(prevZ, zu_u), sz, reuse=reuse, scope=s,
                               bias=False, regularizer=reg)
                     variable_summaries(z_zu, suffix='z_zu{}'.format(i))
                 z_zs.append(z_zu)
@@ -375,7 +375,7 @@ class Agent:
                           regularizer=reg, bias_init=tf.constant_initializer(1.))
                 variable_summaries(yu_u, suffix='yu_u{}'.format(i))
             with tf.variable_scope('z{}_yu'.format(i)) as s:
-                z_yu = fc(tf.mul(y, yu_u), sz, reuse=reuse, scope=s, bias=False,
+                z_yu = fc(tf.multiply(y, yu_u), sz, reuse=reuse, scope=s, bias=False,
                           regularizer=reg)
                 z_ys.append(z_yu)
                 variable_summaries(z_yu, suffix='z_yu{}'.format(i))
@@ -417,7 +417,7 @@ class Fun:
         self._inputs = inputs if type(inputs) == list else [inputs]
         self._outputs = outputs
         # self._summary_op = tf.merge_summary(summary_ops) if type(summary_ops) == list else summary_ops
-        self._summary_op = tf.merge_summary(summary_ops) if type(summary_ops) == list else summary_ops
+        self._summary_op = tf.summary.merge(summary_ops) if type(summary_ops) == list else summary_ops
         self._session = session or tf.get_default_session()
         self._writer = summary_writer
 
@@ -439,7 +439,7 @@ class Fun:
 
         if log:
             i = kwargs['global_step']
-            self._writer.add_summary(res[-1], global_step=i)
+            self._writer.summary.add(res[-1], global_step=i)
             res = res[: -1]
 
         return res
