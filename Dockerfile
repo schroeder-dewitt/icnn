@@ -57,6 +57,10 @@ RUN python3 -c "import mujoco_py"
 RUN apt-get install -y libhdf5-serial-dev
 RUN pip3 install numpy sklearn h5py gym cffi setproctitle matplotlib pymongo sacred pyyaml dill tflearn
 
+# set pythonpath
+RUN echo "export PYTHONPATH=/icnn/RL/src" >> ~/.bashrc
+RUN echo "export PYTHONPATH=/icnn/RL/src" >> ~/.profile
+
 EXPOSE 8888
 
 WORKDIR /icnn
