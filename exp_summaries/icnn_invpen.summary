@@ -1,6 +1,6 @@
 pymarl_path: /home/chrder/projects/icnn
-python_path: :/ICNN
+python_path: :/ICNN:/icnn/RL
 results_path: /home/chrder/projects/icnn/results
-    name: icnn_invpen__run__16_01_19-18_09_12__repeat1
-    gpu: 5
-    docker_hash: IGah
+    name: icnn_invpen__run__16_01_19-18_14_11__repeat1
+    gpu: 7
+    docker_hash: KxmZ
