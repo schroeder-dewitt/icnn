@@ -120,7 +120,7 @@ class Experiment(object):
         self.agent.saver.save(self.agent.sess, ckpt)
 
     def run_episode(self, test=True, monitor=False):
-        self.env.monitor.configure(lambda _: monitor)
+        #self.env.monitor.configure(lambda _: monitor)
         observation = self.env.reset()
         self.agent.reset(observation)
         sum_reward = 0

@@ -75,14 +75,14 @@ class Agent:
         q_target_entr = -negQ_entr_target
 
         if FLAGS.icnn_opt == 'adam':
-            y = tf.select(term_target, rew, rew + discount * q_target_entr)
+            y = tf.where(term_target, rew, rew + discount * q_target_entr)
             y = tf.maximum(q_entr - 1., y)
             y = tf.minimum(q_entr + 1., y)
             y = tf.stop_gradient(y)
             td_error = q_entr - y
         elif FLAGS.icnn_opt == 'bundle_entropy':
             raise RuntimeError("Needs checking.")
-            q_target = tf.select(term2, rew, rew + discount * q2_entropy)
+            q_target = tf.where(term2, rew, rew + discount * q2_entropy)
             q_target = tf.maximum(q_entropy - 1., q_target)
             q_target = tf.minimum(q_entropy + 1., q_target)
             q_target = tf.stop_gradient(q_target)
@@ -109,7 +109,7 @@ class Agent:
         optimize_q = optim_q.apply_gradients(grads_and_vars_q)
 
 
-        summary_writer = tf.train.SummaryWriter(os.path.join(FLAGS.outdir, 'board'),
+        summary_writer = tf.summary.FileWriter(os.path.join(FLAGS.outdir, 'board'),
                                                 self.sess.graph)
         if FLAGS.icnn_opt == 'adam':
             tf.summary.scalar('Qvalue', tf.reduce_mean(q))
@@ -117,7 +117,7 @@ class Agent:
             tf.summary.scalar('Qvalue', tf.reduce_mean(q_entr))
         tf.summary.scalar('loss', ms_td_error)
         tf.summary.scalar('reward', tf.reduce_mean(rew))
-        merged = tf.merge_all_summaries()
+        merged = tf.summary.merge_all()
 
         # tf functions
         with self.sess.as_default():
