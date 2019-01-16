@@ -67,15 +67,15 @@ class ExperimentICNN(object):
             reward_list = []
             last_checkpoint = np.floor(self.train_timestep / FLAGS.train)
             while np.floor(self.train_timestep / FLAGS.train) == last_checkpoint:
-                #print('=== Running episode')
+                print('=== Running episode')
                 reward, timestep = self.run_episode(test=False, monitor=False, ts=self.train_timestep, _logger=_logger)
                 reward_list.append(reward)
                 self.train_timestep += timestep
                 train_log.write("{}\t{}\n".format(self.train_timestep, reward))
                 train_log.flush()
             avg_reward = np.mean(reward_list)
-            #print('Average train return {} after {} timestep of training.'.format(
-            #    avg_reward, self.train_timestep))
+            print('Average train return {} after {} timestep of training.'.format(
+                avg_reward, self.train_timestep))
             prefix = ""
             _logger.log_stat(prefix + "return_mean", avg_reward, self.train_timestep)
             os.system('{} {}'.format(plotScr, FLAGS.outdir))

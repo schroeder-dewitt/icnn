@@ -1,0 +1,18 @@
+{
+  "return_mean": [
+    8.5,
+    8.583333333333334
+  ],
+  "return_mean_T": [
+    102,
+    205
+  ],
+  "testreturn_mean": [
+    20.0,
+    27.0
+  ],
+  "testreturn_mean_T": [
+    0,
+    102
+  ]
+}

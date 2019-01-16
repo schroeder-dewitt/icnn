@@ -24,7 +24,7 @@
       ],
       [
         "main.py",
-        "_sources/main_088c420aed6bd39a80cdad6742b5d946.py"
+        "_sources/main_a805de65db79fa2c78934d6fb92bc0bf.py"
       ],
       [
         "normalized_env.py",
@@ -46,9 +46,9 @@
     "\nDuring handling of the above exception, another exception occurred:\n\n",
     "Traceback (most recent call last):\n",
     "  File \"/home/cs/Documents/icnn/RL/src/runtime_env.py\", line 82, in execute\n    self.main()\n",
-    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 203, in mainer\n",
-    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 29, in run\n    self.train_timestep = 0\n",
-    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 29, in run\n    self.train_timestep = 0\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 205, in mainer\n    ExperimentICNN().run(logger)\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 50, in run\n    while self.train_timestep < FLAGS.total:\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 50, in run\n    while self.train_timestep < FLAGS.total:\n",
     "  File \"_pydevd_bundle/pydevd_cython.pyx\", line 969, in _pydevd_bundle.pydevd_cython.SafeCallWrapper.__call__\n",
     "  File \"_pydevd_bundle/pydevd_cython.pyx\", line 515, in _pydevd_bundle.pydevd_cython.PyDBFrame.trace_dispatch\n",
     "  File \"_pydevd_bundle/pydevd_cython.pyx\", line 758, in _pydevd_bundle.pydevd_cython.PyDBFrame.trace_dispatch\n",
@@ -58,7 +58,7 @@
     "\nDuring handling of the above exception, another exception occurred:\n\n",
     "Traceback (most recent call last):\n",
     "  File \"/home/cs/Documents/venvs/icnn/lib/python3.6/site-packages/sacred/config/captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n",
-    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 206, in my_main\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 208, in my_main\n    runtime_env.run(mainer, FLAGS.outdir)\n",
     "  File \"/home/cs/Documents/icnn/RL/src/runtime_env.py\", line 34, in run\n    Executor(main, outdir).execute()\n",
     "  File \"/home/cs/Documents/icnn/RL/src/runtime_env.py\", line 82, in execute\n    self.main()\n",
     "  File \"/home/cs/Documents/icnn/RL/src/runtime_env.py\", line 93, in on_error\n    traceback.print_exc()\n",
@@ -66,7 +66,7 @@
     "  File \"/usr/lib/python3.6/traceback.py\", line 105, in print_exception\n    print(line, file=file, end=\"\")\n",
     "BrokenPipeError: [Errno 32] Broken pipe\n"
   ],
-  "heartbeat": "2019-01-16T20:27:43.654249",
+  "heartbeat": "2019-01-16T20:35:33.045652",
   "host": {
     "ENV": {},
     "cpu": "Intel(R) Core(TM) i7-5930K CPU @ 3.50GHz",
@@ -121,7 +121,7 @@
   },
   "resources": [],
   "result": null,
-  "start_time": "2019-01-16T17:40:00.152695",
+  "start_time": "2019-01-16T20:34:13.090876",
   "status": "FAILED",
-  "stop_time": "2019-01-16T20:27:43.697540"
+  "stop_time": "2019-01-16T20:35:33.104847"
 }

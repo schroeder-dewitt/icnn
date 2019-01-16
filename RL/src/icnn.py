@@ -193,7 +193,7 @@ class Agent:
                          else lam*a_diff + (1.-lam)*a_diff_i
                 # print(a_diff_i, a_diff, np.sum(f))
                 if a_diff < 1e-3 and i > 5:
-                    print('  + Adam took {} iterations'.format(i))
+                    #print('  + Adam took {} iterations'.format(i))
                     if plot:
                         self.adam_plot(func, obs, hist)
                     return act_best
@@ -263,7 +263,7 @@ class Agent:
 
     def act(self, test=False):
         with self.sess.as_default():
-            print('--- Selecting action, test={}'.format(test))
+            # print('--- Selecting action, test={}'.format(test))
             obs = np.expand_dims(self.observation, axis=0)
 
             if FLAGS.icnn_opt == 'adam':
@@ -312,7 +312,7 @@ class Agent:
                 f = self._fg_target
             else:
                 raise RuntimeError("Unrecognized ICNN optimizer: "+FLAGS.icnn_opt)
-            print('--- Optimizing for training')
+            # print('--- Optimizing for training')
             tflearn.is_training(False)
             act2 = self.opt(f, ob2)
             tflearn.is_training(True)

@@ -36,7 +36,7 @@ def main():
     plt.legend(handles=lines, loc=2)
     fname = os.path.join(args.data, 'result.pdf')
     plt.savefig(fname)
-    print('Created {}'.format(fname))
+    # print('Created {}'.format(fname))
 
 
 def get_data(dirpath):

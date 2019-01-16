@@ -41,7 +41,7 @@ def main():
     plt.legend()
     fname = os.path.join(args.expDir, 'reward.pdf')
     plt.savefig(fname)
-    print('Created {}'.format(fname))
+    # print('Created {}'.format(fname))
 
 if __name__ == '__main__':
     main()
