@@ -40,7 +40,7 @@ fi
 if [ $target == "local" ] ; then
 
     echo "launching locally on "`hostname`"..."
-    export PYTHONPATH=$PYTHONPATH:/ICNN
+    export PYTHONPATH=$PYTHONPATH:/ICNN:/icnn/RL
 
     # enter general run information into summary file
     echo "hostname: "`hostname`" "
@@ -57,8 +57,8 @@ if [ $target == "local" ] ; then
         gpu_id=`shuf -i0-${n_upper} -n1`
         echo "Starting repeat number $i on GPU $gpu_id"
         HASH=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 4 | head -n 1)
-        echo "NV_GPU=${gpu_id} ${ICNN_PATH}/docker.sh ${HASH} python3 train.py ${cmd_line} --exp-name ${name}__repeat${i} &"
-        NV_GPU=${gpu_id} ${ICNN_PATH}/docker.sh ${HASH} python3 RL/src/main.py ${cmd_line} --exp-name ${name}__repeat${i} &
+        echo "NV_GPU=${gpu_id} ${ICNN_PATH}/docker.sh ${HASH} python3 train.py ${cmd_line} --exp_name ${name}__repeat${i} &"
+        NV_GPU=${gpu_id} ${ICNN_PATH}/docker.sh ${HASH} python3 RL/src/main.py ${cmd_line} --exp_name ${name}__repeat${i} &
         echo "repeat: ${i}"
         echo "    name: ${name}__repeat${i}" >> $sfilepath
         echo "    gpu: ${gpu_id}" >> $sfilepath
