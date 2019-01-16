@@ -12,6 +12,7 @@ import tensorflow as tf
 
 import agent
 import normalized_env
+import dill
 import runtime_env
 
 import time
@@ -44,7 +45,9 @@ setproctitle.setproctitle('ICNN.RL.{}.{}.{}'.format(
 
 os.makedirs(FLAGS.outdir, exist_ok=True)
 with open(os.path.join(FLAGS.outdir, 'flags.json'), 'w') as f:
-    json.dump(FLAGS.__flags, f, indent=2, sort_keys=True)
+    #json.dump(FLAGS.__flags, f, indent=2, sort_keys=True)
+    #dill.dump(FLAGS.__flags, f)
+    f.write(FLAGS.flags_into_string())
 
 if FLAGS.model == 'DDPG':
     import ddpg
@@ -65,9 +68,11 @@ class Experiment(object):
 
         # create normal
         self.env = normalized_env.make_normalized_env(gym.make(FLAGS.env))
+        self.env.monitor = gym.wrappers.Monitor(self.env, 'test_monit', video_callable=lambda x: True, force=True)
         tf.set_random_seed(FLAGS.tfseed)
         np.random.seed(FLAGS.npseed)
-        self.env.monitor.start(os.path.join(FLAGS.outdir, 'monitor'), force=FLAGS.force)
+        self.env.monitor._start(os.path.join(FLAGS.outdir, 'monitor'), force=FLAGS.force)
+        #self.menv.monitor.start(os.path.join(FLAGS.outdir, 'monitor'), force=FLAGS.force)
         self.env.seed(FLAGS.gymseed)
         gym.logger.setLevel(gym.logging.WARNING)
 

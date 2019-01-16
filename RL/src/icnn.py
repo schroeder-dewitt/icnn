@@ -81,7 +81,7 @@ class Agent:
             y = tf.stop_gradient(y)
             td_error = q_entr - y
         elif FLAGS.icnn_opt == 'bundle_entropy':
-            raise RuntimError("Needs checking.")
+            raise RuntimeError("Needs checking.")
             q_target = tf.select(term2, rew, rew + discount * q2_entropy)
             q_target = tf.maximum(q_entropy - 1., q_target)
             q_target = tf.minimum(q_entropy + 1., q_target)
