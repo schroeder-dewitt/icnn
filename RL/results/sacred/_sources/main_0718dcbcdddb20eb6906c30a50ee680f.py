@@ -52,7 +52,7 @@ class ExperimentICNN(object):
             reward_list = []
             for _ in range(FLAGS.test):
                 reward, timestep = self.run_episode(
-                    test=True, monitor=np.random.rand() < FLAGS.monitor, ts=self.train_timestep, _logger=_logger)
+                    test=True, monitor=np.random.rand() < FLAGS.monitor)
                 reward_list.append(reward)
                 self.test_timestep += timestep
             avg_reward = np.mean(reward_list)
@@ -66,7 +66,7 @@ class ExperimentICNN(object):
             last_checkpoint = np.floor(self.train_timestep / FLAGS.train)
             while np.floor(self.train_timestep / FLAGS.train) == last_checkpoint:
                 print('=== Running episode')
-                reward, timestep = self.run_episode(test=False, monitor=False, ts=self.train_timestep, _logger=_logger)
+                reward, timestep = self.run_episode(test=False, monitor=False)
                 reward_list.append(reward)
                 self.train_timestep += timestep
                 train_log.write("{}\t{}\n".format(self.train_timestep, reward))
@@ -82,7 +82,7 @@ class ExperimentICNN(object):
         ckpt = os.path.join(FLAGS.outdir, "tf/model.ckpt")
         self.agent.saver.save(self.agent.sess, ckpt)
 
-    def run_episode(self, test=True, monitor=False, ts=None, _logger=None):
+    def run_episode(self, test=True, monitor=False):
         #self.env.monitor.configure(lambda _: monitor)
         observation = self.env.reset()
         self.agent.reset(observation)
@@ -114,8 +114,7 @@ class ExperimentICNN(object):
             print('  + Total {} time: {:.4f} seconds'.format(k, np.mean(v)))
 
         print('  + Reward: {}'.format(sum_reward))
-        prefix = "" if not test else "test"
-        _logger.log_stat(prefix + "return_mean", float(sum_reward)/float(timestep), ts+timestep)
+        logger.log_stat(prefix + "return_mean_agent{}".format(_i), np.mean(rew[-arglist.save_rate:]), train_step)
         return sum_reward, timestep
 
 

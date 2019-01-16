@@ -1,0 +1,128 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/cs/Documents/icnn/RL/src",
+    "dependencies": [
+      "dill==0.2.8.2",
+      "gym==0.10.9",
+      "munch==2.3.2",
+      "numpy==1.14.5",
+      "pymongo==3.7.2",
+      "PyYAML==3.13",
+      "sacred==0.7.4",
+      "setproctitle==1.1.10",
+      "tensorflow-gpu==1.12.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "agent.py",
+        "_sources/agent_f6cc9e64a0c64a8093c662412487de8b.py"
+      ],
+      [
+        "main.py",
+        "_sources/main_41a3c5a102bffeb67d9f7af4bab1678b.py"
+      ],
+      [
+        "normalized_env.py",
+        "_sources/normalized_env_3b239ca1da7769528b12449670494bad.py"
+      ],
+      [
+        "runtime_env.py",
+        "_sources/runtime_env_768922343370b7a4dc9f3c9aa7b5fde5.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"_pydevd_bundle/pydevd_cython.pyx\", line 750, in _pydevd_bundle.pydevd_cython.PyDBFrame.trace_dispatch\n",
+    "  File \"_pydevd_bundle/pydevd_cython.pyx\", line 254, in _pydevd_bundle.pydevd_cython.PyDBFrame.do_wait_suspend\n",
+    "  File \"/home/cs/Tools/pycharm-professional-2018.3.2/pycharm-2018.3.2/helpers/pydev/pydevd.py\", line 877, in do_wait_suspend\n    time.sleep(0.01)\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/runtime_env.py\", line 65, in on_kill\n    print(\"Experiment aborted\")\n",
+    "BrokenPipeError: [Errno 32] Broken pipe\n",
+    "\nDuring handling of the above exception, another exception occurred:\n\n",
+    "Traceback (most recent call last):\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/runtime_env.py\", line 82, in execute\n    self.main()\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 203, in mainer\n    ExperimentICNN().run(logger)\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 55, in run\n    test=True, monitor=np.random.rand() < FLAGS.monitor, ts=self.train_timestep, _logger=_logger)\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 119, in run_episode\n    return sum_reward, timestep\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 119, in run_episode\n    return sum_reward, timestep\n",
+    "  File \"_pydevd_bundle/pydevd_cython.pyx\", line 969, in _pydevd_bundle.pydevd_cython.SafeCallWrapper.__call__\n",
+    "  File \"_pydevd_bundle/pydevd_cython.pyx\", line 515, in _pydevd_bundle.pydevd_cython.PyDBFrame.trace_dispatch\n",
+    "  File \"_pydevd_bundle/pydevd_cython.pyx\", line 758, in _pydevd_bundle.pydevd_cython.PyDBFrame.trace_dispatch\n",
+    "  File \"/usr/lib/python3.6/traceback.py\", line 163, in print_exc\n    print_exception(*sys.exc_info(), limit=limit, file=file, chain=chain)\n",
+    "  File \"/usr/lib/python3.6/traceback.py\", line 105, in print_exception\n    print(line, file=file, end=\"\")\n",
+    "BrokenPipeError: [Errno 32] Broken pipe\n",
+    "\nDuring handling of the above exception, another exception occurred:\n\n",
+    "Traceback (most recent call last):\n",
+    "  File \"/home/cs/Documents/venvs/icnn/lib/python3.6/site-packages/sacred/config/captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/main.py\", line 206, in my_main\n    runtime_env.run(mainer, FLAGS.outdir)\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/runtime_env.py\", line 34, in run\n    Executor(main, outdir).execute()\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/runtime_env.py\", line 82, in execute\n    self.main()\n",
+    "  File \"/home/cs/Documents/icnn/RL/src/runtime_env.py\", line 93, in on_error\n    traceback.print_exc()\n",
+    "  File \"/usr/lib/python3.6/traceback.py\", line 163, in print_exc\n    print_exception(*sys.exc_info(), limit=limit, file=file, chain=chain)\n",
+    "  File \"/usr/lib/python3.6/traceback.py\", line 105, in print_exception\n    print(line, file=file, end=\"\")\n",
+    "BrokenPipeError: [Errno 32] Broken pipe\n"
+  ],
+  "heartbeat": "2019-01-16T17:39:04.435258",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i7-5930K CPU @ 3.50GHz",
+    "gpus": {
+      "driver_version": "396.54",
+      "gpus": [
+        {
+          "model": "GeForce GTX TITAN X",
+          "persistence_mode": false,
+          "total_memory": 12209
+        },
+        {
+          "model": "TITAN Xp",
+          "persistence_mode": false,
+          "total_memory": 12196
+        }
+      ]
+    },
+    "hostname": "octavia",
+    "os": [
+      "Linux",
+      "Linux-4.15.0-43-generic-x86_64-with-Ubuntu-18.04-bionic"
+    ],
+    "python_version": "3.6.7"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat_interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print_config": false,
+      "--priority": null,
+      "--queue": false,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2019-01-16T17:36:09.071981",
+  "status": "FAILED",
+  "stop_time": "2019-01-16T17:39:04.476929"
+}

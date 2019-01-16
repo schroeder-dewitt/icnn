@@ -115,7 +115,7 @@ class ExperimentICNN(object):
 
         print('  + Reward: {}'.format(sum_reward))
         prefix = "" if not test else "test"
-        _logger.log_stat(prefix + "return_mean", float(sum_reward)/float(timestep), ts+timestep)
+        _logger.log_stat(prefix + "return_mean", sum_reward/timestep, ts)
         return sum_reward, timestep
 
 
