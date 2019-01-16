@@ -1,0 +1,2815 @@
+[INFO 18:04:44] pymarl Running command 'my_main'
+[INFO 18:04:44] pymarl Started run with ID "42079"
+[DEBUG 18:04:44] pymarl Starting Heartbeat
+[DEBUG 18:04:44] my_main Started
+outdir: output
+/usr/local/lib/python3.5/dist-packages/gym/envs/registration.py:14: PkgResourcesDeprecationWarning: Parameters to load are deprecated.  Call .resolve and .require separately.
+  result = entry_point.load(False)
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+True action space: [-3.], [3.]
+True state space: [-inf -inf -inf -inf], [inf inf inf inf]
+Filtered action space: [-1.], [1.]
+Filtered state space: [-inf -inf -inf -inf], [inf inf inf inf]
+{'_entry_point': 'gym.envs.mujoco:InvertedPendulumEnv',
+ '_env_name': 'InvertedPendulum',
+ '_kwargs': {},
+ '_local_only': False,
+ 'id': 'InvertedPendulum-v2',
+ 'max_episode_seconds': None,
+ 'max_episode_steps': 1000,
+ 'nondeterministic': False,
+ 'reward_threshold': 950.0,
+ 'tags': {'wrapper_config.TimeLimit.max_episode_steps': 1000},
+ 'trials': 100}
+2019-01-16 18:04:45.837793: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-01-16 18:04:46.157266: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:04:00.0
+totalMemory: 10.92GiB freeMemory: 9.70GiB
+2019-01-16 18:04:46.420883: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:05:00.0
+totalMemory: 10.92GiB freeMemory: 9.83GiB
+2019-01-16 18:04:46.701300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 2 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:08:00.0
+totalMemory: 10.92GiB freeMemory: 10.20GiB
+2019-01-16 18:04:46.986420: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 3 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:09:00.0
+totalMemory: 10.92GiB freeMemory: 9.73GiB
+2019-01-16 18:04:47.286970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 4 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 9.92GiB
+2019-01-16 18:04:47.599279: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 5 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:84:00.0
+totalMemory: 10.92GiB freeMemory: 9.92GiB
+2019-01-16 18:04:47.912342: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 6 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:87:00.0
+totalMemory: 10.92GiB freeMemory: 10.29GiB
+2019-01-16 18:04:48.264207: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 7 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:88:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-01-16 18:04:48.279333: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1, 2, 3, 4, 5, 6, 7
+2019-01-16 18:04:51.252357: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-16 18:04:51.252433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 2 3 4 5 6 7 
+2019-01-16 18:04:51.252448: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y Y Y N N N N 
+2019-01-16 18:04:51.252457: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N Y Y N N N N 
+2019-01-16 18:04:51.252466: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 2:   Y Y N Y N N N N 
+2019-01-16 18:04:51.252474: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 3:   Y Y Y N N N N N 
+2019-01-16 18:04:51.252483: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 4:   N N N N N Y Y Y 
+2019-01-16 18:04:51.252491: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 5:   N N N N Y N Y Y 
+2019-01-16 18:04:51.252500: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 6:   N N N N Y Y N Y 
+2019-01-16 18:04:51.252508: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 7:   N N N N Y Y Y N 
+2019-01-16 18:04:51.254613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9374 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-01-16 18:04:51.255554: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 9499 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:05:00.0, compute capability: 6.1)
+2019-01-16 18:04:51.256140: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 9859 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:08:00.0, compute capability: 6.1)
+2019-01-16 18:04:51.256835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 9402 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:09:00.0, compute capability: 6.1)
+2019-01-16 18:04:51.257419: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:4 with 9588 MB memory) -> physical GPU (device: 4, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+2019-01-16 18:04:51.258437: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:5 with 9588 MB memory) -> physical GPU (device: 5, name: GeForce GTX 1080 Ti, pci bus id: 0000:84:00.0, compute capability: 6.1)
+2019-01-16 18:04:51.258936: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:6 with 9948 MB memory) -> physical GPU (device: 6, name: GeForce GTX 1080 Ti, pci bus id: 0000:87:00.0, compute capability: 6.1)
+2019-01-16 18:04:51.259473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:7 with 10405 MB memory) -> physical GPU (device: 7, name: GeForce GTX 1080 Ti, pci bus id: 0000:88:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/util/tf_should_use.py:189: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+[WARNING 18:04:55] tensorflow From /usr/local/lib/python3.5/dist-packages/tensorflow/python/util/tf_should_use.py:189: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0928 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 20.0
+Average test return 20.0 after 0 timestep of training.
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0345 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0268 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0254 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 8.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0284 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 10.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0264 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 5.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0296 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0294 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0296 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 20.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0260 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 10.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0244 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0247 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0230 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+Average train return 8.5 after 102 timestep of training.
+Created output/reward.pdf
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0223 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 27.0
+Average test return 27.0 after 102 timestep of training.
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0237 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 11.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0282 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0297 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0263 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 8.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0288 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 19.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0250 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0271 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 8.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0253 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0280 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0242 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0263 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0280 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 10.0
+Average train return 8.583333333333334 after 205 timestep of training.
+Created output/reward.pdf
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0263 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 30.0
+Average test return 30.0 after 205 timestep of training.
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0262 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 11.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0271 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0232 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0321 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0273 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 10.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0236 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 11.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0266 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0260 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0242 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 12.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0269 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 13.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0280 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 9.0
+Average train return 9.181818181818182 after 306 timestep of training.
+Created output/reward.pdf
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0248 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 24.0
+Average test return 24.0 after 306 timestep of training.
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0265 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 18.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0295 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0304 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 5.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0289 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 23.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0283 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0253 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 15.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0314 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 5.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0309 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0273 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 13.0
+Average train return 11.555555555555555 after 410 timestep of training.
+Created output/reward.pdf
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0269 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 25.0
+Average test return 25.0 after 410 timestep of training.
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0271 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 8.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0281 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0258 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 10.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0266 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 10.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0243 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 11.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0262 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0298 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 5.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0263 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0252 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0235 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 5.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0264 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0285 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 8.0
+Average train return 8.0 after 506 timestep of training.
+Created output/reward.pdf
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0285 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 25.0
+Average test return 25.0 after 506 timestep of training.
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0271 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 14.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0292 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 13.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0284 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 10.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0284 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0261 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0307 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0281 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 8.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0300 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0299 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 10.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0298 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 8.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0290 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 8.0
+Average train return 9.0 after 605 timestep of training.
+Created output/reward.pdf
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0248 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 22.0
+Average test return 22.0 after 605 timestep of training.
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0266 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 12.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0243 seconds
+  + Total envStep time: 0.0001 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 11.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0246 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0285 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0289 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 8.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0268 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 13.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0284 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 8.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0294 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0303 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 4.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0303 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 12.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0263 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 12.0
+Average train return 9.363636363636363 after 708 timestep of training.
+Created output/reward.pdf
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0241 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 20.0
+Average test return 20.0 after 708 timestep of training.
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0260 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0283 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0274 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 9.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0254 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 6.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0228 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 10.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0230 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0002 seconds
+  + Reward: 17.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0245 seconds
+  + Total envStep time: 0.0003 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0218 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 12.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0241 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0277 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 7.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0297 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 8.0
+Average train return 8.909090909090908 after 806 timestep of training.
+Created output/reward.pdf
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+--- Selecting action, test=True
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0229 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 28.0
+Average test return 28.0 after 806 timestep of training.
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0234 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 5.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0211 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0000 seconds
+  + Reward: 11.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+--- Selecting action, test=False
+  + Adam took 6 iterations
+=== Episode stats:
+  + Total act time: 0.0236 seconds
+  + Total envStep time: 0.0002 seconds
+  + Total obs time: 0.0001 seconds
+  + Reward: 11.0
+=== Running episode
+--- Selecting action, test=False
+  + Adam took 6 iterations

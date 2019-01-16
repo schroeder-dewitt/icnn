@@ -1,0 +1,125 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/icnn/RL/src",
+    "dependencies": [
+      "dill==0.2.8.2",
+      "gym==0.10.9",
+      "munch==2.3.2",
+      "numpy==1.16.0",
+      "pymongo==3.7.2",
+      "PyYAML==3.13",
+      "sacred==0.7.4",
+      "setproctitle==1.1.10",
+      "tensorflow-gpu==1.12.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "agent.py",
+        "_sources/agent_f6cc9e64a0c64a8093c662412487de8b.py"
+      ],
+      [
+        "main.py",
+        "_sources/main_088c420aed6bd39a80cdad6742b5d946.py"
+      ],
+      [
+        "normalized_env.py",
+        "_sources/normalized_env_3b239ca1da7769528b12449670494bad.py"
+      ],
+      [
+        "runtime_env.py",
+        "_sources/runtime_env_768922343370b7a4dc9f3c9aa7b5fde5.py"
+      ]
+    ]
+  },
+  "heartbeat": null,
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+    "gpus": {
+      "driver_version": "390.77",
+      "gpus": [
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        }
+      ]
+    },
+    "hostname": "savitar",
+    "os": [
+      "Linux",
+      "Linux-4.4.0-62-generic-x86_64-with-Ubuntu-16.04-xenial"
+    ],
+    "python_version": "3.5.2"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat_interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print_config": false,
+      "--priority": null,
+      "--queue": false,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "start_time": "2019-01-16T18:10:40.894826",
+  "status": "RUNNING"
+}

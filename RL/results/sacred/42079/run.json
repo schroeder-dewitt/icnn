@@ -1,0 +1,148 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/icnn/RL/src",
+    "dependencies": [
+      "dill==0.2.8.2",
+      "gym==0.10.9",
+      "munch==2.3.2",
+      "numpy==1.16.0",
+      "pymongo==3.7.2",
+      "PyYAML==3.13",
+      "sacred==0.7.4",
+      "setproctitle==1.1.10",
+      "tensorflow-gpu==1.12.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "agent.py",
+        "_sources/agent_f6cc9e64a0c64a8093c662412487de8b.py"
+      ],
+      [
+        "main.py",
+        "_sources/main_088c420aed6bd39a80cdad6742b5d946.py"
+      ],
+      [
+        "normalized_env.py",
+        "_sources/normalized_env_3b239ca1da7769528b12449670494bad.py"
+      ],
+      [
+        "runtime_env.py",
+        "_sources/runtime_env_768922343370b7a4dc9f3c9aa7b5fde5.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/sacred/config/captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"RL/src/main.py\", line 206, in my_main\n    runtime_env.run(mainer, FLAGS.outdir)\n",
+    "  File \"/icnn/RL/src/runtime_env.py\", line 34, in run\n    Executor(main, outdir).execute()\n",
+    "  File \"/icnn/RL/src/runtime_env.py\", line 82, in execute\n    self.main()\n",
+    "  File \"RL/src/main.py\", line 203, in mainer\n    ExperimentICNN().run(logger)\n",
+    "  File \"RL/src/main.py\", line 69, in run\n    reward, timestep = self.run_episode(test=False, monitor=False, ts=self.train_timestep, _logger=_logger)\n",
+    "  File \"RL/src/main.py\", line 95, in run_episode\n    action = self.agent.act(test=test)\n",
+    "  File \"/icnn/RL/src/icnn.py\", line 278, in act\n    action = self.opt(f, obs)\n",
+    "  File \"/icnn/RL/src/icnn.py\", line 177, in adam\n    f, g = func(obs, act)\n",
+    "  File \"/icnn/RL/src/icnn.py\", line 438, in __call__\n    res = self._session.run(out, feeds)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 929, in run\n    run_metadata_ptr)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1152, in _run\n    feed_dict_tensor, options, run_metadata)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1328, in _do_run\n    run_metadata)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1334, in _do_call\n    return fn(*args)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1319, in _run_fn\n    options, feed_dict, fetch_list, target_list, run_metadata)\n",
+    "  File \"/usr/local/lib/python3.5/dist-packages/tensorflow/python/client/session.py\", line 1407, in _call_tf_sessionrun\n    run_metadata)\n",
+    "  File \"/icnn/RL/src/runtime_env.py\", line 66, in on_kill\n    sys.exit(-1)\n",
+    "SystemExit: -1\n"
+  ],
+  "heartbeat": "2019-01-16T18:05:34.739692",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+    "gpus": {
+      "driver_version": "390.77",
+      "gpus": [
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        }
+      ]
+    },
+    "hostname": "savitar",
+    "os": [
+      "Linux",
+      "Linux-4.4.0-62-generic-x86_64-with-Ubuntu-16.04-xenial"
+    ],
+    "python_version": "3.5.2"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat_interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print_config": false,
+      "--priority": null,
+      "--queue": false,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2019-01-16T18:04:44.750490",
+  "status": "FAILED",
+  "stop_time": "2019-01-16T18:05:34.748465"
+}
