@@ -1,0 +1,460 @@
+[INFO 16:21:32] pymarl Running command 'my_main'
+[INFO 16:21:32] pymarl Started run with ID "42501"
+[DEBUG 16:21:32] pymarl Starting Heartbeat
+[DEBUG 16:21:32] my_main Started
+outdir: /icnn/results/icnn_invpen_naf
+/usr/local/lib/python3.5/dist-packages/gym/envs/registration.py:14: PkgResourcesDeprecationWarning: Parameters to load are deprecated.  Call .resolve and .require separately.
+  result = entry_point.load(False)
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+True action space: [-3.], [3.]
+True state space: [-inf -inf -inf -inf], [inf inf inf inf]
+Filtered action space: [-1.], [1.]
+Filtered state space: [-inf -inf -inf -inf], [inf inf inf inf]
+{'_entry_point': 'gym.envs.mujoco:InvertedPendulumEnv',
+ '_env_name': 'InvertedPendulum',
+ '_kwargs': {},
+ '_local_only': False,
+ 'id': 'InvertedPendulum-v2',
+ 'max_episode_seconds': None,
+ 'max_episode_steps': 1000,
+ 'nondeterministic': False,
+ 'reward_threshold': 950.0,
+ 'tags': {'wrapper_config.TimeLimit.max_episode_steps': 1000},
+ 'trials': 100}
+2019-01-25 16:21:33.377380: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-01-25 16:21:33.633467: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:04:00.0
+totalMemory: 10.92GiB freeMemory: 10.01GiB
+2019-01-25 16:21:33.633526: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-01-25 16:21:34.006252: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-25 16:21:34.006321: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-01-25 16:21:34.006333: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-01-25 16:21:34.006644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9676 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/util/tf_should_use.py:189: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+[WARNING 16:21:35] tensorflow From /usr/local/lib/python3.5/dist-packages/tensorflow/python/util/tf_should_use.py:189: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+Average test return 19.0 after 0 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00513'
+Average test return 26.0 after 107 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00513'
+Average test return 24.0 after 207 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00513'
+Average test return 26.0 after 300 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00513'
+Average test return 19.0 after 404 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x001436'
+Average test return 21.0 after 505 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00513'
+Average test return 20.0 after 604 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00513'
+Average test return 25.0 after 706 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00513'
+Average test return 20.0 after 812 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00513'
+Average test return 24.0 after 905 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00513'
+Average test return 21.0 after 1006 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x002294'
+Average test return 31.0 after 1107 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x003717'
+Average test return 15.0 after 1205 timestep of training.
+Average test return 9.0 after 1301 timestep of training.
+Average test return 5.0 after 1405 timestep of training.
+Average test return 23.0 after 1506 timestep of training.
+Average test return 61.0 after 1631 timestep of training.
+Average test return 73.0 after 1751 timestep of training.
+Average test return 137.0 after 1835 timestep of training.
+Average test return 124.0 after 1969 timestep of training.
+Average test return 105.0 after 2043 timestep of training.
+Average test return 75.0 after 2151 timestep of training.
+Average test return 71.0 after 2208 timestep of training.
+Average test return 78.0 after 2374 timestep of training.
+Average test return 61.0 after 2435 timestep of training.
+Average test return 67.0 after 2554 timestep of training.
+Average test return 167.0 after 2621 timestep of training.
+Average test return 56.0 after 2762 timestep of training.
+Average test return 48.0 after 2824 timestep of training.
+Average test return 69.0 after 2920 timestep of training.
+Average test return 66.0 after 3014 timestep of training.
+Average test return 62.0 after 3122 timestep of training.
+Average test return 56.0 after 3209 timestep of training.
+Average test return 75.0 after 3326 timestep of training.
+Average test return 52.0 after 3441 timestep of training.
+Average test return 252.0 after 3556 timestep of training.
+Average test return 85.0 after 3603 timestep of training.
+Average test return 55.0 after 3717 timestep of training.
+Average test return 51.0 after 3839 timestep of training.
+Average test return 113.0 after 3912 timestep of training.
+Average test return 78.0 after 4015 timestep of training.
+Average test return 55.0 after 4128 timestep of training.
+Average test return 60.0 after 4236 timestep of training.
+Average test return 57.0 after 4307 timestep of training.
+Average test return 54.0 after 4431 timestep of training.
+Average test return 64.0 after 4508 timestep of training.
+Average test return 69.0 after 4607 timestep of training.
+Average test return 58.0 after 4718 timestep of training.
+Average test return 51.0 after 4818 timestep of training.
+Average test return 57.0 after 4913 timestep of training.
+Average test return 46.0 after 5009 timestep of training.
+Average test return 53.0 after 5112 timestep of training.
+Average test return 88.0 after 5224 timestep of training.
+Average test return 48.0 after 5323 timestep of training.
+Average test return 50.0 after 5404 timestep of training.
+Average test return 78.0 after 5500 timestep of training.
+Average test return 80.0 after 5652 timestep of training.
+Average test return 85.0 after 5720 timestep of training.
+Average test return 77.0 after 5816 timestep of training.
+Average test return 108.0 after 5912 timestep of training.
+Average test return 212.0 after 6037 timestep of training.
+Average test return 68.0 after 6142 timestep of training.
+Average test return 116.0 after 6224 timestep of training.
+Average test return 63.0 after 6333 timestep of training.
+Average test return 46.0 after 6415 timestep of training.
+Average test return 1000.0 after 6537 timestep of training.
+Average test return 1000.0 after 6604 timestep of training.
+Average test return 52.0 after 6717 timestep of training.
+Average test return 1000.0 after 6854 timestep of training.
+Average test return 106.0 after 6948 timestep of training.
+Average test return 1000.0 after 7019 timestep of training.
+Average test return 43.0 after 7157 timestep of training.
+Average test return 1000.0 after 7211 timestep of training.
+Average test return 53.0 after 7301 timestep of training.
+Average test return 45.0 after 7451 timestep of training.
+Average test return 1000.0 after 7507 timestep of training.
+Average test return 1000.0 after 7758 timestep of training.
+Average test return 1000.0 after 7817 timestep of training.
+Average test return 1000.0 after 7926 timestep of training.
+Average test return 1000.0 after 8022 timestep of training.
+Average test return 1000.0 after 8116 timestep of training.
+Average test return 1000.0 after 8244 timestep of training.
+Average test return 23.0 after 8309 timestep of training.
+Average test return 1000.0 after 8520 timestep of training.
+Average test return 1000.0 after 8648 timestep of training.
+Average test return 1000.0 after 8742 timestep of training.
+Average test return 1000.0 after 8803 timestep of training.
+Average test return 1000.0 after 8958 timestep of training.
+Average test return 1000.0 after 9051 timestep of training.
+Average test return 1000.0 after 9118 timestep of training.
+Average test return 1000.0 after 9214 timestep of training.
+Average test return 1000.0 after 9314 timestep of training.
+Average test return 1000.0 after 9492 timestep of training.
+Average test return 1000.0 after 9507 timestep of training.
+Average test return 1000.0 after 9603 timestep of training.
+Average test return 1000.0 after 9704 timestep of training.
+Average test return 1000.0 after 9812 timestep of training.
+Average test return 1000.0 after 9937 timestep of training.
+Average test return 1000.0 after 10061 timestep of training.
+Average test return 343.0 after 10102 timestep of training.
+Average test return 1000.0 after 10216 timestep of training.
+Average test return 1000.0 after 10310 timestep of training.
+Average test return 1000.0 after 10423 timestep of training.
+Average test return 1000.0 after 10516 timestep of training.
+Average test return 1000.0 after 10694 timestep of training.
+Average test return 1000.0 after 10710 timestep of training.
+Average test return 1000.0 after 10929 timestep of training.
+Average test return 1000.0 after 11043 timestep of training.
+Average test return 1000.0 after 11135 timestep of training.
+Average test return 1000.0 after 11202 timestep of training.
+Average test return 1000.0 after 11329 timestep of training.
+Average test return 1000.0 after 11451 timestep of training.
+Average test return 1000.0 after 11526 timestep of training.
+Average test return 1000.0 after 11614 timestep of training.
+Average test return 1000.0 after 11726 timestep of training.
+Average test return 1000.0 after 11850 timestep of training.
+Average test return 1000.0 after 12028 timestep of training.
+Average test return 1000.0 after 12214 timestep of training.
+Average test return 1000.0 after 12315 timestep of training.
+Average test return 1000.0 after 12428 timestep of training.
+Average test return 21.0 after 12521 timestep of training.
+Average test return 1000.0 after 12603 timestep of training.
+Average test return 1000.0 after 12722 timestep of training.
+Average test return 1000.0 after 12841 timestep of training.
+Average test return 1000.0 after 12991 timestep of training.
+Average test return 1000.0 after 13011 timestep of training.
+Average test return 1000.0 after 13130 timestep of training.
+Average test return 1000.0 after 13201 timestep of training.
+Average test return 1000.0 after 13350 timestep of training.
+Average test return 1000.0 after 13411 timestep of training.
+Average test return 1000.0 after 13505 timestep of training.
+Average test return 1000.0 after 13601 timestep of training.
+Average test return 1000.0 after 13744 timestep of training.
+Average test return 1000.0 after 13805 timestep of training.
+Average test return 1000.0 after 13918 timestep of training.
+Average test return 1000.0 after 14098 timestep of training.
+Average test return 1000.0 after 14134 timestep of training.
+Average test return 1000.0 after 14272 timestep of training.
+Average test return 1000.0 after 14350 timestep of training.
+Average test return 1000.0 after 14456 timestep of training.
+Average test return 1000.0 after 14513 timestep of training.
+Average test return 1000.0 after 14617 timestep of training.
+Average test return 1000.0 after 14711 timestep of training.
+Average test return 1000.0 after 14806 timestep of training.
+Average test return 1000.0 after 14930 timestep of training.
+Average test return 1000.0 after 15004 timestep of training.
+Average test return 1000.0 after 15140 timestep of training.
+Average test return 1000.0 after 15266 timestep of training.
+Average test return 1000.0 after 15379 timestep of training.
+Average test return 1000.0 after 15470 timestep of training.
+Average test return 1000.0 after 15520 timestep of training.
+Average test return 1000.0 after 15629 timestep of training.
+Average test return 1000.0 after 15707 timestep of training.
+Average test return 1000.0 after 15832 timestep of training.
+Average test return 1000.0 after 15903 timestep of training.
+Average test return 1000.0 after 16046 timestep of training.
+Average test return 1000.0 after 16143 timestep of training.
+Average test return 1000.0 after 16211 timestep of training.
+Average test return 1000.0 after 16327 timestep of training.
+Average test return 1000.0 after 16405 timestep of training.
+Average test return 1000.0 after 16531 timestep of training.
+Average test return 1000.0 after 16607 timestep of training.
+Average test return 1000.0 after 16704 timestep of training.
+Average test return 1000.0 after 16884 timestep of training.
+Average test return 1000.0 after 16917 timestep of training.
+Average test return 1000.0 after 17013 timestep of training.
+Average test return 1000.0 after 17138 timestep of training.
+Average test return 1000.0 after 17238 timestep of training.
+Average test return 1000.0 after 17318 timestep of training.
+Average test return 1000.0 after 17435 timestep of training.
+Average test return 1000.0 after 17560 timestep of training.
+Average test return 1000.0 after 17604 timestep of training.
+Average test return 1000.0 after 17735 timestep of training.
+Average test return 1000.0 after 17841 timestep of training.
+Average test return 1000.0 after 17911 timestep of training.
+Average test return 1000.0 after 18039 timestep of training.
+Average test return 1000.0 after 18116 timestep of training.
+Average test return 1000.0 after 18214 timestep of training.
+Average test return 1000.0 after 18362 timestep of training.
+Average test return 1000.0 after 18409 timestep of training.
+Average test return 1000.0 after 18517 timestep of training.
+Average test return 1000.0 after 18644 timestep of training.
+Average test return 1000.0 after 18762 timestep of training.
+Average test return 1000.0 after 18826 timestep of training.
+Average test return 1000.0 after 18908 timestep of training.
+Average test return 1000.0 after 19022 timestep of training.
+Average test return 1000.0 after 19116 timestep of training.
+Average test return 1000.0 after 19257 timestep of training.
+Average test return 1000.0 after 19313 timestep of training.
+Average test return 1000.0 after 19414 timestep of training.
+Average test return 1000.0 after 19523 timestep of training.
+Average test return 1000.0 after 19602 timestep of training.
+Average test return 1000.0 after 19727 timestep of training.
+Average test return 1000.0 after 19837 timestep of training.
+Average test return 1000.0 after 19936 timestep of training.
+Average test return 1000.0 after 20047 timestep of training.
+Average test return 1000.0 after 20131 timestep of training.
+Average test return 1000.0 after 20225 timestep of training.
+Average test return 1000.0 after 20320 timestep of training.
+Average test return 1000.0 after 20440 timestep of training.
+Average test return 1000.0 after 20538 timestep of training.
+Average test return 1000.0 after 20626 timestep of training.
+Average test return 1000.0 after 20721 timestep of training.
+Average test return 1000.0 after 20830 timestep of training.
+Average test return 1000.0 after 20900 timestep of training.
+Average test return 1000.0 after 21000 timestep of training.
+Average test return 1000.0 after 21114 timestep of training.
+Average test return 1000.0 after 21204 timestep of training.
+Average test return 1000.0 after 21323 timestep of training.
+Average test return 1000.0 after 21401 timestep of training.
+Average test return 1000.0 after 21536 timestep of training.
+Average test return 1000.0 after 21615 timestep of training.
+Average test return 1000.0 after 21708 timestep of training.
+Average test return 1000.0 after 21810 timestep of training.
+Average test return 1000.0 after 21907 timestep of training.
+Average test return 1000.0 after 22013 timestep of training.
+Average test return 1000.0 after 22122 timestep of training.
+Average test return 1000.0 after 22244 timestep of training.
+Average test return 1000.0 after 22318 timestep of training.
+Average test return 119.0 after 22413 timestep of training.
+Average test return 1000.0 after 22519 timestep of training.
+Average test return 1000.0 after 22606 timestep of training.
+Average test return 1000.0 after 22738 timestep of training.
+Average test return 1000.0 after 22810 timestep of training.
+Average test return 1000.0 after 22923 timestep of training.
+Average test return 1000.0 after 23041 timestep of training.
+Average test return 1000.0 after 23121 timestep of training.
+Average test return 1000.0 after 23336 timestep of training.
+Average test return 113.0 after 23435 timestep of training.
+Average test return 1000.0 after 23520 timestep of training.
+Average test return 1000.0 after 23606 timestep of training.
+Average test return 1000.0 after 23706 timestep of training.
+Average test return 1000.0 after 23803 timestep of training.
+Average test return 1000.0 after 24005 timestep of training.
+Average test return 1000.0 after 24109 timestep of training.
+Average test return 1000.0 after 24207 timestep of training.
+Average test return 1000.0 after 24346 timestep of training.
+Average test return 1000.0 after 24407 timestep of training.
+Average test return 1000.0 after 24507 timestep of training.
+Average test return 1000.0 after 24601 timestep of training.
+Average test return 1000.0 after 24705 timestep of training.
+Average test return 1000.0 after 24859 timestep of training.
+Average test return 1000.0 after 24907 timestep of training.
+Average test return 1000.0 after 25007 timestep of training.
+Average test return 1000.0 after 25144 timestep of training.
+Average test return 1000.0 after 25204 timestep of training.
+Average test return 84.0 after 25314 timestep of training.
+Average test return 1000.0 after 25454 timestep of training.
+Average test return 1000.0 after 25500 timestep of training.
+Average test return 1000.0 after 25625 timestep of training.
+Average test return 691.0 after 25703 timestep of training.
+Average test return 1000.0 after 25810 timestep of training.

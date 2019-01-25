@@ -1,0 +1,32 @@
+[INFO 13:27:08] pymarl Running command 'my_main'
+[INFO 13:27:08] pymarl Started run with ID "42463"
+[DEBUG 13:27:08] pymarl Starting Heartbeat
+[DEBUG 13:27:08] my_main Started
+outdir: /icnn/results/icnn_hc_naf
+/usr/local/lib/python3.5/dist-packages/gym/envs/registration.py:14: PkgResourcesDeprecationWarning: Parameters to load are deprecated.  Call .resolve and .require separately.
+  result = entry_point.load(False)
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+True action space: [-1. -1. -1. -1. -1. -1.], [1. 1. 1. 1. 1. 1.]
+True state space: [-inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
+ -inf -inf -inf], [inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf]
+Filtered action space: [-1. -1. -1. -1. -1. -1.], [1. 1. 1. 1. 1. 1.]
+Filtered state space: [-inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
+ -inf -inf -inf], [inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf]
+{'_entry_point': 'gym.envs.mujoco:HalfCheetahEnv',
+ '_env_name': 'HalfCheetah',
+ '_kwargs': {},
+ '_local_only': False,
+ 'id': 'HalfCheetah-v2',
+ 'max_episode_seconds': None,
+ 'max_episode_steps': 1000,
+ 'nondeterministic': False,
+ 'reward_threshold': 4800.0,
+ 'tags': {'wrapper_config.TimeLimit.max_episode_steps': 1000},
+ 'trials': 100}
+2019-01-25 13:27:09.647663: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-01-25 13:27:14.917083: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.20GiB
+2019-01-25 13:27:14.917156: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0

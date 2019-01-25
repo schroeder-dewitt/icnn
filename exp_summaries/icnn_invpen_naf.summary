@@ -1,0 +1,33 @@
+pymarl_path: /home/chrder/projects/icnn
+python_path: :/ICNN:/icnn/RL
+results_path: /home/chrder/projects/icnn/results
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat1
+    gpu: 6
+    docker_hash: 2jbd
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat2
+    gpu: 3
+    docker_hash: FMNn
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat3
+    gpu: 0
+    docker_hash: 86Bw
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat4
+    gpu: 6
+    docker_hash: tGLO
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat5
+    gpu: 6
+    docker_hash: Xm7J
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat6
+    gpu: 5
+    docker_hash: Pm36
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat7
+    gpu: 1
+    docker_hash: PEXM
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat8
+    gpu: 6
+    docker_hash: YJKw
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat9
+    gpu: 0
+    docker_hash: ONfo
+    name: icnn_invpen_naf__run__25_01_19-16_20_48__repeat10
+    gpu: 1
+    docker_hash: tC9M

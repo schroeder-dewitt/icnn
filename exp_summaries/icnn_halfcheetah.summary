@@ -1,0 +1,18 @@
+pymarl_path: /home/chrder/projects/icnn
+python_path: :/ICNN:/icnn/RL
+results_path: /home/chrder/projects/icnn/results
+    name: icnn_halfcheetah__run__16_01_19-21_04_53__repeat1
+    gpu: 0
+    docker_hash: a8lV
+    name: icnn_halfcheetah__run__16_01_19-21_04_53__repeat2
+    gpu: 0
+    docker_hash: L7UA
+    name: icnn_halfcheetah__run__16_01_19-21_04_53__repeat3
+    gpu: 2
+    docker_hash: K9a1
+    name: icnn_halfcheetah__run__16_01_19-21_04_53__repeat4
+    gpu: 3
+    docker_hash: JJfQ
+    name: icnn_halfcheetah__run__16_01_19-21_04_53__repeat5
+    gpu: 7
+    docker_hash: lufT

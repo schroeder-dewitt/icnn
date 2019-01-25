@@ -1,0 +1,156 @@
+[INFO 16:11:40] pymarl Running command 'my_main'
+[INFO 16:11:40] pymarl Started run with ID "42491"
+[DEBUG 16:11:40] pymarl Starting Heartbeat
+[DEBUG 16:11:40] my_main Started
+outdir: /icnn/results/icnn_hc_naf
+/usr/local/lib/python3.5/dist-packages/gym/envs/registration.py:14: PkgResourcesDeprecationWarning: Parameters to load are deprecated.  Call .resolve and .require separately.
+  result = entry_point.load(False)
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+[33mWARN: gym.spaces.Box autodetected dtype as <class 'numpy.float32'>. Please provide explicit dtype.[0m
+True action space: [-1. -1. -1. -1. -1. -1.], [1. 1. 1. 1. 1. 1.]
+True state space: [-inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
+ -inf -inf -inf], [inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf]
+Filtered action space: [-1. -1. -1. -1. -1. -1.], [1. 1. 1. 1. 1. 1.]
+Filtered state space: [-inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf
+ -inf -inf -inf], [inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf]
+{'_entry_point': 'gym.envs.mujoco:HalfCheetahEnv',
+ '_env_name': 'HalfCheetah',
+ '_kwargs': {},
+ '_local_only': False,
+ 'id': 'HalfCheetah-v2',
+ 'max_episode_seconds': None,
+ 'max_episode_steps': 1000,
+ 'nondeterministic': False,
+ 'reward_threshold': 4800.0,
+ 'tags': {'wrapper_config.TimeLimit.max_episode_steps': 1000},
+ 'trials': 100}
+2019-01-25 16:11:41.005058: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-01-25 16:11:41.294838: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:88:00.0
+totalMemory: 10.92GiB freeMemory: 10.51GiB
+2019-01-25 16:11:41.294894: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-01-25 16:11:41.653127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-25 16:11:41.653205: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-01-25 16:11:41.653219: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-01-25 16:11:41.653507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10165 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:88:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/util/tf_should_use.py:189: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+[WARNING 16:11:42] tensorflow From /usr/local/lib/python3.5/dist-packages/tensorflow/python/util/tf_should_use.py:189: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+Average test return -0.5458964455391996 after 0 timestep of training.
+Traceback (most recent call last):
+  File "/icnn/RL/src/../plot-single.py", line 47, in <module>
+    main()
+  File "/icnn/RL/src/../plot-single.py", line 25, in main
+    trainData = np.loadtxt(trainP).reshape(-1, 2)
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1134, in loadtxt
+    for x in read_data(_loadtxt_chunksize):
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in read_data
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 1061, in <listcomp>
+    items = [conv(val) for (conv, val) in zip(converters, vals)]
+  File "/usr/local/lib/python3.5/dist-packages/numpy/lib/npyio.py", line 768, in floatconv
+    return float(x)
+ValueError: could not convert string to float: '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x004000'
+Average test return 0.10135566127450062 after 1000 timestep of training.
+Average test return -379.3353615188287 after 2000 timestep of training.
+Average test return -322.9668310320129 after 3000 timestep of training.
+Average test return -455.17831251834536 after 4000 timestep of training.
+Average test return -175.29842496546516 after 5000 timestep of training.
+Average test return -606.0178538549129 after 6000 timestep of training.
+Average test return -132.99592006174603 after 7000 timestep of training.
+Average test return -537.540157528712 after 8000 timestep of training.
+Average test return -94.7457469482965 after 9000 timestep of training.
+Average test return -430.48099039124565 after 10000 timestep of training.
+Average test return -507.71066231779275 after 11000 timestep of training.
+Average test return -302.90053564810745 after 12000 timestep of training.
+Average test return -307.2931482513625 after 13000 timestep of training.
+Average test return -360.04372139858214 after 14000 timestep of training.
+Average test return -478.17717056994707 after 15000 timestep of training.
+Average test return -502.3315960818749 after 16000 timestep of training.
+Average test return -330.55837353829645 after 17000 timestep of training.
+Average test return -428.2609036252154 after 18000 timestep of training.
+Average test return -94.83916281086978 after 19000 timestep of training.
+Average test return -503.70054841671913 after 20000 timestep of training.
+Average test return -295.73297701862293 after 21000 timestep of training.
+Average test return -368.0737089177596 after 22000 timestep of training.
+Average test return -386.83020197390175 after 23000 timestep of training.
+Average test return -423.121373257266 after 24000 timestep of training.
+Average test return -221.00032604867633 after 25000 timestep of training.
+Average test return -297.0591732052525 after 26000 timestep of training.
+Average test return -306.387005151712 after 27000 timestep of training.
+Average test return -424.2869956127483 after 28000 timestep of training.
+Average test return -470.4085785332965 after 29000 timestep of training.
+Average test return -452.1486157314579 after 30000 timestep of training.
+Average test return -414.2992110278751 after 31000 timestep of training.
+Average test return -158.42987026949262 after 32000 timestep of training.
+Average test return -319.5940441716822 after 33000 timestep of training.
+Average test return -224.44108799146636 after 34000 timestep of training.
+Average test return -377.82900421257494 after 35000 timestep of training.
+Average test return -372.66580767927036 after 36000 timestep of training.
+Average test return -316.5507154112832 after 37000 timestep of training.
+Average test return -299.6709069818999 after 38000 timestep of training.
+Average test return -384.5872479166387 after 39000 timestep of training.
+Average test return -553.197366983089 after 40000 timestep of training.
+Average test return -404.215665742692 after 41000 timestep of training.
+Average test return -219.7957702098244 after 42000 timestep of training.
+Average test return -748.4736549256894 after 43000 timestep of training.
+Average test return -382.275498066448 after 44000 timestep of training.
+Average test return -358.03794328744766 after 45000 timestep of training.
+Average test return -435.04462856746767 after 46000 timestep of training.
+Average test return -435.1059630698654 after 47000 timestep of training.
+Average test return -455.177409701591 after 48000 timestep of training.
+Average test return -727.5173301949369 after 49000 timestep of training.
+Average test return -534.6891146494444 after 50000 timestep of training.
+Average test return -475.15679649177287 after 51000 timestep of training.
+Average test return -540.2126135479966 after 52000 timestep of training.
+Average test return -476.8022581655201 after 53000 timestep of training.
+Average test return -428.05122389802426 after 54000 timestep of training.
+Average test return -557.4925517207919 after 55000 timestep of training.
+Average test return -553.4680382836626 after 56000 timestep of training.
+Average test return -300.6000276572966 after 57000 timestep of training.
+Average test return -628.0369075797827 after 58000 timestep of training.
+Average test return -503.59318074288757 after 59000 timestep of training.
+Average test return -408.7399974884174 after 60000 timestep of training.
+Average test return -482.61102320706584 after 61000 timestep of training.
+Average test return -565.224003878796 after 62000 timestep of training.
+Average test return -457.8042094696077 after 63000 timestep of training.
+Average test return -338.1163455112009 after 64000 timestep of training.
+Average test return -454.95577711562777 after 65000 timestep of training.
+Average test return -493.04442231902004 after 66000 timestep of training.
+Average test return -322.66192101499024 after 67000 timestep of training.
+Average test return -378.73669025987454 after 68000 timestep of training.
+Average test return -760.2193321034633 after 69000 timestep of training.
+Average test return -351.2720318457394 after 70000 timestep of training.
+Average test return -229.2449623751972 after 71000 timestep of training.
+Average test return -491.584468653085 after 72000 timestep of training.
+Average test return -350.02233881575364 after 73000 timestep of training.
+Average test return -711.6656983104771 after 74000 timestep of training.
+Average test return -801.6705667926211 after 75000 timestep of training.
+Average test return -113.3270032506731 after 76000 timestep of training.
+Average test return -130.75545895007318 after 77000 timestep of training.
+Average test return 37.55778715987297 after 78000 timestep of training.
+Average test return -82.7530755439034 after 79000 timestep of training.
+Average test return -127.18720030128456 after 80000 timestep of training.
+Average test return -40.14058921985319 after 81000 timestep of training.
+Average test return -186.99979360790152 after 82000 timestep of training.
+Average test return 50.8808280886074 after 83000 timestep of training.
+Average test return 62.51993096047264 after 84000 timestep of training.
+Average test return 54.70810420270582 after 85000 timestep of training.
+Average test return -361.3121729111397 after 86000 timestep of training.
+Average test return -246.84171092930302 after 87000 timestep of training.
+Average test return -314.3695678062234 after 88000 timestep of training.
+Average test return -66.57256396233564 after 89000 timestep of training.
+Average test return -308.2289812323832 after 90000 timestep of training.
+Average test return 113.75653093690259 after 91000 timestep of training.
+Average test return -144.88180324048713 after 92000 timestep of training.
+Average test return -139.0864148475033 after 93000 timestep of training.
+Average test return -292.5936536932649 after 94000 timestep of training.
+Average test return -125.46050368784044 after 95000 timestep of training.
+Average test return -187.21944037174202 after 96000 timestep of training.
+Average test return -232.83270129079216 after 97000 timestep of training.
+Average test return -198.8803688185866 after 98000 timestep of training.
+Average test return -203.87251547199597 after 99000 timestep of training.
