@@ -69,7 +69,7 @@ class Agent:
         # q targets
         q2 = nets.qfunction(obs2, tf.constant([0.] * FLAGS.bsize),
                             self.theta_Vt, True, is_training)
-        q_target = tf.stop_gradient(tf.select(term2, rew, rew + discount * q2))
+        q_target = tf.stop_gradient(tf.where(term2, rew, rew + discount * q2))
 
         # q loss
         td_error = q_train - q_target
@@ -84,11 +84,11 @@ class Agent:
         with tf.control_dependencies([optimize_q]):
             train_q = tf.group(update_Vt)
 
-        summary_writer = tf.train.SummaryWriter(os.path.join(FLAGS.outdir, 'board'), self.sess.graph)
+        summary_writer = tf.summary.FileWriter(os.path.join(FLAGS.outdir, 'board'), self.sess.graph)
         summary_list = []
-        summary_list.append(tf.scalar_summary('Qvalue', tf.reduce_mean(q_train)))
-        summary_list.append(tf.scalar_summary('loss', ms_td_error))
-        summary_list.append(tf.scalar_summary('reward', tf.reduce_mean(rew)))
+        summary_list.append(tf.summary.scalar('Qvalue', tf.reduce_mean(q_train)))
+        summary_list.append(tf.summary.scalar('loss', ms_td_error))
+        summary_list.append(tf.summary.scalar('reward', tf.reduce_mean(rew)))
 
         # tf functions
         with self.sess.as_default():
@@ -100,10 +100,10 @@ class Agent:
         # initialize tf variables
         self.saver = tf.train.Saver(max_to_keep=1)
         ckpt = tf.train.latest_checkpoint(FLAGS.outdir + "/tf")
-        if ckpt:
-            self.saver.restore(self.sess, ckpt)
-        else:
-            self.sess.run(tf.initialize_all_variables())
+        #if ckpt:
+        #    self.saver.restore(self.sess, ckpt)
+        #else:
+        self.sess.run(tf.initialize_all_variables()) # we don't want to load any checkpoint please
 
         self.sess.graph.finalize()
 
@@ -151,7 +151,7 @@ class Fun:
     def __init__(self, inputs, outputs, summary_ops=None, summary_writer=None, session=None):
         self._inputs = inputs if type(inputs) == list else [inputs]
         self._outputs = outputs
-        self._summary_op = tf.merge_summary(summary_ops) if type(summary_ops) == list else summary_ops
+        self._summary_op = tf.summary.merge(summary_ops) if type(summary_ops) == list else summary_ops
         self._session = session or tf.get_default_session()
         self._writer = summary_writer
 
